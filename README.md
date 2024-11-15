@@ -61,9 +61,9 @@ Find sum of the main diagonal elements of a square matrix.
 	Output:
 	3 (main diagonal is 1+1+1=3)
 	
- 	Input:  [[3, 6, 9], 
- 		 [8, 5, 2], 
-    		 [1, 7, 4]]
+ 	Input:  [[3, 6, 9],
+  		 [8, 5, 2], 
+     		 [1, 7, 4]]
 	Output:
 	12 
 
@@ -79,7 +79,7 @@ Find sum of each row and column
 
 **Example**
 
-	Input:  [[2, 4, 6], 
+	Input:  [[2, 4, 6],
  		 [1, 3, 5], 
     		 [7, 9, 11]]
 	Output: [12, 9, 27], [10, 16, 22]
