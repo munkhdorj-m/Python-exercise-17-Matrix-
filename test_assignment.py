@@ -11,7 +11,7 @@ def check_contains_loop(function):
     ([[10, 8], [6, 4]], [[5, 3], [3, 2]], [[5, 5], [3, 2]]),
     ([[12, 7, 9], [6, 5, 3], [4, 8, 10]], [[3, 5, 6], [2, 1, 3], [7, 2, 4]], [[9, 2, 3], [4, 4, 0], [-3, 6, 6]])
 ])
-def test_subtract_matrices(matrix1, matrix2, expected):
+def test1(matrix1, matrix2, expected):
     assert subtract_matrices(matrix1, matrix2) == expected
     assert check_contains_loop(subtract_matrices)
 
@@ -20,7 +20,7 @@ def test_subtract_matrices(matrix1, matrix2, expected):
     ([[1, 0, 0], [0, 1, 0], [0, 0, 1]], 3),
     ([[3, 6, 9], [8, 5, 2], [1, 7, 4]], 12)
 ])
-def test_sum_main_diagonal(matrix, expected):
+def test2(matrix, expected):
     assert sum_main_diagonal(matrix) == expected
     assert check_contains_loop(sum_main_diagonal)
 
@@ -29,7 +29,7 @@ def test_sum_main_diagonal(matrix, expected):
     ([[1, 1, 1], [2, 2, 2], [3, 3, 3]], [3, 6, 9], [6, 6, 6]),
     ([[4, 0, 1], [9, 2, 3], [5, 6, 7]], [5, 14, 18], [18, 8, 11])
 ])
-def test_sum_rows_columns(matrix, expected_rows, expected_columns):
+def test3(matrix, expected_rows, expected_columns):
     rows, columns = sum_rows_columns(matrix)
     assert rows == expected_rows
     assert columns == expected_columns
