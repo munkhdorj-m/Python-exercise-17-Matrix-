@@ -1,7 +1,7 @@
-# Python List 6
+# Python Matrix
 
-Python List PDF:
-https://drive.google.com/file/d/1lKmQwkQc8rGIuH9OIQB-yM6lFg-lW9Ch/view?usp=sharing
+Python Matrix PDF:
+https://drive.google.com/file/d/1wIb5xDAse4R5rV5EM5GYdNIeDQOaE1q6/view?usp=sharing
 
 
 ---
@@ -10,24 +10,34 @@ https://drive.google.com/file/d/1lKmQwkQc8rGIuH9OIQB-yM6lFg-lW9Ch/view?usp=shari
 
 **Problem:**
 
-Find a pair with given sum in the list. If there's multiple pairs return the first pair.
+Find subtractions of two matrices.
 
 **Example:**
 
-	Input: [3, 8, 2, 5, 10, 7], target_sum = 15
-	Output: [5, 10]
+	Input:
+		Matrix1: [[3, 5, 2], 
+	 		  [7, 8, 6], 
+	     		  [4, 1, 3]]
+		Matrix2: [[1, 4, 0], 
+	 		  [2, 3, 1], 
+	     		  [3, 2, 1]]
+	Output: [[2, 1, 2], [5, 5, 5], [1, -1, 2]]
+	
+	Input:
+		Matrix1: [[10, 8], 
+	 		  [6, 4]]
+		Matrix2: [[5, 3], 
+	 		  [3, 2]]
+	Output: [[5, 5], [3, 2]]
  
-	Input: [2, 7, 11, 15, 4], target_sum = 9
-	Output: [2, 7]
-
-	Input: [1, 2, 3, 4, 5], target_sum = 20
-	Output: []
-    
-	Input: [3, 8, 4, 7, 12, 6], target_sum = 10
-	Output: [3, 7]
-
-	Input: [-4, 0, 3, 1, -1, 5, -5], target_sum = 0
-	Output: [-5, 5]
+	Input:
+		Matrix1: [[12, 7, 9], 
+	 		   [6, 5, 3], 
+	      		   [4, 8, 10]]
+		Matrix2: [[3, 5, 6], 
+	 		  [2, 1, 3], 
+	     		  [7, 2, 4]]
+	Output: [[9, 2, 3], [4, 4, 0], [-3, 6, 6]]
 
 ---
 
@@ -35,24 +45,29 @@ Find a pair with given sum in the list. If there's multiple pairs return the fir
 
 **Problem:**
 
-Find the majority element of an list. If there's no majority element return first element.
+Find sum of the main diagonal elements of a square matrix.
 
 **Example**
 
-	Input: [3, 8, 3, 5, 3, 7]
-	Output: 3
+	Input:  [[4, 5, 6], 
+ 		 [7, 8, 9], 
+    		 [1, 2, 3]]
+	Output:
+	15 (main diagonal is 4+8+3=15)
  
-	Input: [2, 3, 2, 4, 2, 2, 5]
-	Output: 2 
+	Input:  [[1, 0, 0], 
+ 		 [0, 1, 0], 
+    		 [0, 0, 1]]
+	Output:
+	3 (main diagonal is 1+1+1=3)
+	
+ 	Input:  [[3, 6, 9], 
+ 		 [8, 5, 2], 
+    		 [1, 7, 4]]
+	Output:
+	12 
 
- 	Input: [1, 1, 1, 2, 2, 2, 2]
-	Output: 2
 
-	Input: [1, 2, 3, 4, 5]
-	Output: 1
-
-	Input: [6, 6, 7, 7, 8, 8, 9, 9]
-	Output: 6
 
 ---
 
@@ -60,24 +75,24 @@ Find the majority element of an list. If there's no majority element return firs
 
 **Problem:**
 
-Move all zeroes to the end of a given list.
+Find sum of each row and column
 
 **Example**
 
-	Input: [0, 2, 1, 0, 5, 0, 7]
-	Output: [2, 1, 5, 7, 0, 0, 0]
-
-	Input: [0, 3, 0, 4, 0, 1]
-	Output: [3, 4, 1, 0, 0, 0]
-
-	Input: [4, 0, 2]
-	Output: [4, 2, 0]
- 
-	Input: [0, 0, 0, 0]
-	Output: [0, 0, 0, 0]
-
- 	Input: [1, 2, 3, 0, 0, 0]
-	Output: [1, 2, 3, 0, 0, 0]
+	Input:  [[2, 4, 6], 
+ 		 [1, 3, 5], 
+    		 [7, 9, 11]]
+	Output: [12, 9, 27], [10, 16, 22]
+	
+ 	Input:  [[1, 1, 1], 
+ 		 [2, 2, 2], 
+    		 [3, 3, 3]]
+	Output: [3, 6, 9], [6, 6, 6]
+	
+ 	Input:  [[4, 0, 1], 
+ 		 [9, 2, 3], 
+    		 [5, 6, 7]]
+	Output: [5, 14, 18], [18, 8, 11]
  
 ---
 
