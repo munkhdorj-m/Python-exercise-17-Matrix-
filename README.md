@@ -53,20 +53,17 @@ Find sum of the main diagonal elements of a square matrix.
  		[[4, 5, 6], 
  		 [7, 8, 9], 
 		 [1, 2, 3]]
-	Output:
-	15 (main diagonal is 4+8+3=15)
+	Output: 15 (main diagonal is 4+8+3=15)
  
 	Input:  [[1, 0, 0], 
 	 	 [0, 1, 0], 
 	  	 [0, 0, 1]]
-	Output:
-	3 (main diagonal is 1+1+1=3)
+	Output: 3 (main diagonal is 1+1+1=3)
 	
  	Input:  [[3, 6, 9],
 	  	 [8, 5, 2], 
 		 [1, 7, 4]]
-	Output:
-	12 
+	Output: 12 
 
 
 
