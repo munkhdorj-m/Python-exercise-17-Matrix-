@@ -1,16 +1,16 @@
 # You can remove 'pass' if you written code in the function 
 
 # Exercise 1
-def find_pair_with_sum(nums, target_sum):
+def subtract_matrices(matrix1, matrix2)
     # Write your code here
     pass
 
 # Exercise 2
-def find_majority_element(nums):
+def sum_main_diagonal(matrix)
     # Write your code here
     pass
 
 # Exercise 3
-def move_zeroes_to_end(nums):
+def sum_rows_columns(matrix)
     # Write your code here
     pass
