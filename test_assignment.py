@@ -1,40 +1,36 @@
 import pytest
 import inspect
-from assignment import find_pair_with_sum, find_majority_element, move_zeroes_to_end
+from assignment import subtract_matrices, sum_main_diagonal, sum_rows_columns
 
 def check_contains_loop(function):
     source = inspect.getsource(function)
     return 'for' in source or 'while' in source
 
-@pytest.mark.parametrize("numbers, target_sum, expected", [
-    ([3, 8, 2, 5, 10, 7], 15, [5, 10]),
-    ([2, 7, 11, 15, 4], 9, [2, 7]),
-    ([1, 2, 3, 4, 5], 20, []),
-    ([3, 8, 4, 7, 12, 6], 10, [3, 7]),
-    ([-4, 0, 3, 1, -1, 5, -5], 0, [1, -1])
+@pytest.mark.parametrize("matrix1, matrix2, expected", [
+    ([[3, 5, 2], [7, 8, 6], [4, 1, 3]], [[1, 4, 0], [2, 3, 1], [3, 2, 1]], [[2, 1, 2], [5, 5, 5], [1, -1, 2]]),
+    ([[10, 8], [6, 4]], [[5, 3], [3, 2]], [[5, 5], [3, 2]]),
+    ([[12, 7, 9], [6, 5, 3], [4, 8, 10]], [[3, 5, 6], [2, 1, 3], [7, 2, 4]], [[9, 2, 3], [4, 4, 0], [-3, 6, 6]])
 ])
-def test1(numbers, target_sum, expected):
-    assert find_pair_with_sum(numbers, target_sum) == expected
-    assert check_contains_loop(find_pair_with_sum)
+def test_subtract_matrices(matrix1, matrix2, expected):
+    assert subtract_matrices(matrix1, matrix2) == expected
+    assert check_contains_loop(subtract_matrices)
 
-@pytest.mark.parametrize("numbers, expected", [
-    ([3, 8, 3, 5, 3, 7], 3),
-    ([2, 3, 2, 4, 2, 2, 5], 2),
-    ([1, 1, 1, 2, 2, 2, 2], 2),
-    ([1, 2, 3, 4, 5], 1),
-    ([6, 6, 7, 7, 8, 8, 9, 9], 6)
+@pytest.mark.parametrize("matrix, expected", [
+    ([[4, 5, 6], [7, 8, 9], [1, 2, 3]], 15),
+    ([[1, 0, 0], [0, 1, 0], [0, 0, 1]], 3),
+    ([[3, 6, 9], [8, 5, 2], [1, 7, 4]], 12)
 ])
-def test2(numbers, expected):
-    assert find_majority_element(numbers) == expected
-    assert check_contains_loop(find_majority_element)
+def test_sum_main_diagonal(matrix, expected):
+    assert sum_main_diagonal(matrix) == expected
+    assert check_contains_loop(sum_main_diagonal)
 
-@pytest.mark.parametrize("numbers, expected", [
-    ([0, 2, 1, 0, 5, 0, 7], [2, 1, 5, 7, 0, 0, 0]),
-    ([0, 3, 0, 4, 0, 1], [3, 4, 1, 0, 0, 0]),
-    ([4, 0, 2], [4, 2, 0]),
-    ([0, 0, 0, 0], [0, 0, 0, 0]),
-    ([1, 2, 3, 0, 0, 0], [1, 2, 3, 0, 0, 0])
+@pytest.mark.parametrize("matrix, expected_rows, expected_columns", [
+    ([[2, 4, 6], [1, 3, 5], [7, 9, 11]], [12, 9, 27], [10, 16, 22]),
+    ([[1, 1, 1], [2, 2, 2], [3, 3, 3]], [3, 6, 9], [6, 6, 6]),
+    ([[4, 0, 1], [9, 2, 3], [5, 6, 7]], [5, 14, 18], [18, 8, 11])
 ])
-def test3(numbers, expected):
-    assert move_zeroes_to_end(numbers) == expected
-    assert check_contains_loop(move_zeroes_to_end)
+def test_sum_rows_columns(matrix, expected_rows, expected_columns):
+    rows, columns = sum_rows_columns(matrix)
+    assert rows == expected_rows
+    assert columns == expected_columns
+    assert check_contains_loop(sum_rows_columns)
