@@ -49,8 +49,7 @@ Find sum of the main diagonal elements of a square matrix.
 
 **Example**
 
-	Input: 
- 		[[4, 5, 6], 
+	Input:  [[4, 5, 6], 
  		 [7, 8, 9], 
 		 [1, 2, 3]]
 	Output: 15 (main diagonal is 4+8+3=15)
