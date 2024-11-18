@@ -32,8 +32,8 @@ Find subtractions of two matrices.
  
 	Input:
 	Matrix1: [[12, 7, 9], 
-		   [6, 5, 3], 
-		   [4, 8, 10]]
+		  [6, 5, 3], 
+		  [4, 8, 10]]
 	Matrix2: [[3, 5, 6], 
 		  [2, 1, 3], 
 		  [7, 2, 4]]
